@@ -15,15 +15,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //ROUTES WILL GO HERE
 app.use(router);
-  const { DB_HOST, DB_USER, DB_PASS, DB_DATABASE } = process.env;
-dbConnect().then(() => {
-  console.log('Connection with DB is ready');
-  
-});
+const { DB_HOST, DB_USER, DB_PASS, DB_DATABASE } = process.env;
+dbConnect()
+  .then(() => {
+    console.log('Connection with DB is ready');
+  })
+  .catch((e) =>
+    console.log('We have a problem connecting to DB: ' + e.message)
+  );
 app.listen(PORT, () => {
-  console.log(`Server listen on port: ${PORT}`);
-    console.log(
+  console.log(`Server is now listening on port: ${PORT}`);
+  console.log(
     `mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_DATABASE}?retryWrites=true&w=majority`
-  
-  )
+  );
 });
