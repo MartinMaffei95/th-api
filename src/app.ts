@@ -6,7 +6,7 @@ import dbConnect from './config/mongo';
 import cors from 'cors';
 
 //CREATE EXPRESS APP
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(cors());
 
