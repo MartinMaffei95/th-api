@@ -1,0 +1,34 @@
+# Enter an app settings object in YAML format.
+# Comments are not saved.
+
+nodeVersion: '16'
+nodeStartScript: start
+databaseType: none
+buildEnvironment:
+  NODE_ENV: development
+  AWS_ACCESS_KEY_ID: AKIARIQ5AOGVAGNGTL5H
+  AWS_SECRET_ACCESS_KEY: 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
+  AWS_REGION: us-east-2
+  AWS_BUCKET_NAME: thumbnail-api-images
+  AWS_THUBNAIL_URI: https://thumbnail-api-images.s3.us-east-2.amazonaws.com/
+  DB_HOST: thumbnail-generator.ms4xk7v.mongodb.net
+  DB_DATABASE: Thumbnail-Generator
+  DB_USER: thumbnail_user_master
+  DB_PASS: iDsDt1KVE6OWhA7R
+  JWT_SECRET: SECRET.KEY.635
+  PORT: 80
+nodeRunScripts: build
+environment:
+  AWS_ACCESS_KEY_ID: AKIARIQ5AOGVAGNGTL5H
+  AWS_SECRET_ACCESS_KEY: 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
+  AWS_REGION: us-east-2
+  AWS_BUCKET_NAME: thumbnail-api-images
+  AWS_THUBNAIL_URI: https://thumbnail-api-images.s3.us-east-2.amazonaws.com/
+  DB_HOST: thumbnail-generator.ms4xk7v.mongodb.net
+  DB_DATABASE: Thumbnail-Generator
+  DB_USER: thumbnail_user_master
+  DB_PASS: iDsDt1KVE6OWhA7R
+  JWT_SECRET: SECRET.KEY.635
+  PORT: 80
+# The following properties are optional in the settings object:
+#projectPath: ""
