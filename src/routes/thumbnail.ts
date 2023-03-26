@@ -3,6 +3,8 @@ import {
   uploadThumbail,
   getAllThumbnails,
   getMyThumbnails,
+  getOneThumbnail,
+  getThumbnailByQuery,
 } from '../controllers/thumbnail';
 import { uploadImage } from '../middlewares/uploadMiddleware';
 import { upload } from '../services/upload.service';
@@ -11,8 +13,13 @@ import { uploadMiddleware } from '../utils/storage.handler';
 
 const router = Router();
 
-router.get('/', getAllThumbnails);
-router.get('/:nickname', getMyThumbnails);
+router.get('/?', getThumbnailByQuery);
+
+router.get('/all', getAllThumbnails);
+
+// router.get('/:id', getOneThumbnail);
+
+// router.get('/:nickname', getMyThumbnails);
 
 router.post(
   '/',

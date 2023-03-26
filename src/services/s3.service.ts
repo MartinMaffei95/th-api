@@ -22,6 +22,7 @@ export const s3Upload = async (file: any, fileExtension: any) => {
     Bucket: AWS_BUCKET_NAME,
     Key: fileName,
     Body: file.buffer,
+    ContentType: 'image/jpeg',
   };
   const command = new PutObjectCommand(uploadParams);
 
